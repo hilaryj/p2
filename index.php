@@ -6,12 +6,11 @@ ini_set('display_errors', 1);
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project 2 - XKCD-Style Password Generator</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900%7CLato:400,700' rel='stylesheet' type='text/css' />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -30,26 +29,25 @@ ini_set('display_errors', 1);
             <div class="col-md-4">
                 <form method='POST' action='index.php'>
                   <!-- input - how many words to use in the password -->
-                    <label for="wordcount">Number of terms:</label>
-                    <input type="text" name="numberofwords">
+                    <label for="numberofwords">Number of terms:</label>
+                    <input type="text" name="numberofwords" id="numberofwords">
                     <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
                     <p>The maximum number of terms is 6</p>
                     <!-- still have to add this functionality -->
                     <br>
                     
                     <!-- add a symbol? number? -->
-                    <label name="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
-                    <input type="checkbox" name="addsymbol" value="Symbol"><br>
+                    <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
+                    <input type="checkbox" name="addsymbol" value="addsymbol" id="addsymbol"><br>
                     
-                    <label name="addnumber">Add a number? </label>&nbsp;&nbsp;
-                    <input type="checkbox" name="addnumber" value="Number"><br><br>
+                    <label for="addnumber">Add a number? </label>&nbsp;&nbsp;
+                    <input type="checkbox" name="addnumber" value="addnumber" id="addnumber"><br><br>
                     
                     <input type="submit" value="Generate Password" class="btn btn-default">
-                </form>
-                <p>Your password is...</p> <!-- probably want this hidden at first, until the password is generated -->
-                <!-- space to output the password -->
-                <p class="output"><?php echo join("",$password); ?><?php echo $passwordsymbol; ?><?php echo $passwordnumber; ?></p>
-                
+                </form>          
+                    <p>Your password is...</p> <!-- probably want this hidden at first, until the password is generated -->
+                    <!-- space to output the password -->
+                    <p class="output"><?php echo join("",$password); ?><?php echo $passwordsymbol; ?><?php echo $passwordnumber; ?></p>
             </div>
             <div class="col-md-8 about">
             <p>XKCD is a web comic created by Randal Monroe in 2005.  He describes the comic as a "stick-figure strip featuring humour about technology, science, mathematics and relationship."</p>
