@@ -35,12 +35,20 @@ ini_set('display_errors', 1);
                     <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
                     <p>The maximum number of terms is 6</p>
                     <br>
+                    
+                    <!-- add a symbol? number? -->
+                    <label name="addsymbol">Add a symbol? </label>
+                    <input type="checkbox" name="addsymbol" value="Symbol"><br>
+                    
+                    <label name="addnumber">Add a number? </label>
+                    <input type="checkbox" name="addnumber" value="Number"><br>
+                    
                     <input type="submit" value="Generate Password" class="btn btn-default">
-                    <!-- still need to add whether to include symbol or number -->
                 </form>
                 <p>Your password is...</p> <!-- probably want this hidden at first, until the password is generated -->
                 <!-- space to output the password -->
-                <p class="output"><?php echo join("",$password); ?></p>
+                <p class="output"><?php echo join("",$password); ?><?php echo $passwordsymbol; ?><?php echo $passwordnumber; ?></p>
+                
             </div>
             <div class="col-md-8 about">
             <p>XKCD is a webcomic...</p>
