@@ -30,18 +30,19 @@ ini_set('display_errors', 1);
             <div class="col-md-4">
                 <form method='POST' action='index.php'>
                   <!-- input - how many words to use in the password -->
-                    <label for="wordcount">Number of words:</label>
+                    <label for="wordcount">Number of terms:</label>
                     <input type="text" name="numberofwords">
                     <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
                     <p>The maximum number of terms is 6</p>
+                    <!-- still have to add this functionality -->
                     <br>
                     
                     <!-- add a symbol? number? -->
-                    <label name="addsymbol">Add a symbol? </label>
+                    <label name="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
                     <input type="checkbox" name="addsymbol" value="Symbol"><br>
                     
-                    <label name="addnumber">Add a number? </label>
-                    <input type="checkbox" name="addnumber" value="Number"><br>
+                    <label name="addnumber">Add a number? </label>&nbsp;&nbsp;
+                    <input type="checkbox" name="addnumber" value="Number"><br><br>
                     
                     <input type="submit" value="Generate Password" class="btn btn-default">
                 </form>
@@ -51,13 +52,21 @@ ini_set('display_errors', 1);
                 
             </div>
             <div class="col-md-8 about">
-            <p>XKCD is a webcomic...</p>
-            <a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png"/></a>
+            <p>XKCD is a web comic created by Randal Monroe in 2005.  He describes the comic as a "stick-figure strip featuring humour about technology, science, mathematics and relationship."</p>
+            <p>In August 2011, Monroe posted <a href="http://xkcd.com/936/" target="_blank">"Password Strength"</a>,  a proposal to create passwords that are easy for people to remember and hard for computers to guess, noticing the problem that increasingly computers are guessing the passwords that we tried SO hard to make complicated, and consequently forgot them due to their complexity. </p>
+                <p>Citing the example of a password like 'Tr0ub4dor&amp;3' (how is anyone supposed to remember that?', he proposed using four random common words -- e.g. correcthorsebatterystaple. </p>
+                <hr>
+                <p>I made a password generator using Japanese sound-effect words, a.k.a. <i>onomatopoeia</i>. </p>
+                <p>For people familiar with Pokemon, you may recognize 'pikapika' as the sound Pikachu makes when he's energized; in fact, 'pikapika' means 'to glitter or sparkle' in Japanese. </p>
+                <p>How about 'dokidoki'? ... It's the sound of a heart beating. </p>
+                <p>I thought Japanese sound effect words would be fun to use in passwords, so here you are! Please feel free to give it a try. </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p>&copy; <?php echo date("Y") ?> Hilary Johnson</p>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; <?php echo date("Y") ?> Hilary Johnson</p>
+                </div>
             </div>
         </div>
     </div> <!-- end container -->

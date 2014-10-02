@@ -27,3 +27,8 @@ h1 { font-family: 'Alegreya Sans SC', sans-serif; }
 .about {
     border-left: 1px solid #A8867C;
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+}
