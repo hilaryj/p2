@@ -27,33 +27,36 @@ ini_set('display_errors', 1);
         </div>
         <div class="row maincontent">
             <div class="col-md-4">
-                <form method='POST' action='index.php'>
-                  <!-- input - how many words to use in the password -->
-                    <label for="numberofwords">Number of terms:</label>
-                    <input type="text" name="numberofwords" id="numberofwords">
-                    <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
-                    <p>The maximum number of terms is 6</p>
-                    <!-- still have to add this functionality -->
-                    <br>
-                    
-                    <!-- add a symbol? number? -->
-                    <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
-                    <input type="checkbox" name="addsymbol" value="addsymbol" id="addsymbol"><br>
-                    
-                    <label for="addnumber">Add a number? </label>&nbsp;&nbsp;
-                    <input type="checkbox" name="addnumber" value="addnumber" id="addnumber"><br><br>
-                    
-                    <input type="submit" value="Generate Password" class="btn btn-default">
-                </form>          
+                <div class="grouping">
+                    <h3>Password Generator</h3>
+                    <form method='POST' action='index.php'>
+                      <!-- input - how many words to use in the password -->
+                        <label for="numberofwords">Number of terms:</label>
+                        <input type="text" name="numberofwords" id="numberofwords">
+                        <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
+                        <p>The maximum number of terms is 6</p>
+                        <!-- still have to add this functionality -->
+                        <br>
+
+                        <!-- add a symbol? number? -->
+                        <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
+                        <input type="checkbox" name="addsymbol" value="addsymbol" id="addsymbol"><br>
+
+                        <label for="addnumber">Add a number? </label>&nbsp;&nbsp;
+                        <input type="checkbox" name="addnumber" value="addnumber" id="addnumber"><br><br>
+
+                        <input type="submit" value="Generate Password" class="btn btn-default">
+                    </form><br> 
                     <p>Your password is...</p> <!-- probably want this hidden at first, until the password is generated -->
                     <!-- space to output the password -->
                     <p class="output"><?php echo join("",$password); ?><?php echo $passwordsymbol; ?><?php echo $passwordnumber; ?></p>
+                </div>
             </div>
             <div class="col-md-8 about">
             <p>XKCD is a web comic created by Randal Monroe in 2005.  He describes the comic as a "stick-figure strip featuring humour about technology, science, mathematics and relationship."</p>
             <p>In August 2011, Monroe posted <a href="http://xkcd.com/936/" target="_blank">"Password Strength"</a>,  a proposal to create passwords that are easy for people to remember and hard for computers to guess, noticing the problem that increasingly computers are guessing the passwords that we tried SO hard to make complicated, and consequently forgot them due to their complexity. </p>
                 <p>Citing the example of a password like 'Tr0ub4dor&amp;3' (how is anyone supposed to remember that?', he proposed using four random common words -- e.g. correcthorsebatterystaple. </p>
-                <hr>
+                <hr class="divider">
                 <p>I made a password generator using Japanese sound-effect words, a.k.a. <i>onomatopoeia</i>. </p>
                 <p>For people familiar with Pokemon, you may recognize 'pikapika' as the sound Pikachu makes when he's energized; in fact, 'pikapika' means 'to glitter or sparkle' in Japanese. </p>
                 <p>How about 'dokidoki'? ... It's the sound of a heart beating. </p>
