@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 2 - XKCD-Style Password Generator</title>
+    <title>DWA15 Project 2 - XKCD-Style Password Generator</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900%7CLato:400,700' rel='stylesheet' type='text/css' />
@@ -22,45 +22,40 @@ ini_set('display_errors', 1);
         <div class="row">
             <div class="col-md-12 sitetitle">
                 <h1>Japanese Onomatopoeia Password Generator</h1>
-                <h2>... in the style of XKCD's Password Generator</h2>
+                <h2>in the style of XKCD's Password Generator</h2>
             </div>
         </div>
         <div class="row maincontent">
             <div class="col-md-4">
                 <div class="grouping">
                     <h3>Password Generator</h3>
-                    <form method='POST' action='index.php'>
-                      <!-- input - how many words to use in the password -->
-                        <label for="numberofwords">Number of terms:</label>
-                        <input type="text" name="numberofwords" id="numberofwords">
-                        <p>I recommend 2 or 3 terms; any more than that and it starts to get crazy!</p>
-                        <p>The maximum number of terms is 6</p>
-                        <!-- still have to add this functionality -->
-                        <br>
-
-                        <!-- add a symbol? number? -->
-                        <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
-                        <input type="checkbox" name="addsymbol" value="addsymbol" id="addsymbol"><br>
-
-                        <label for="addnumber">Add a number? </label>&nbsp;&nbsp;
-                        <input type="checkbox" name="addnumber" value="addnumber" id="addnumber"><br><br>
-
-                        <input type="submit" value="Generate Password" class="btn btn-default">
-                    </form><br> 
-                    <p>Your password is...</p> <!-- probably want this hidden at first, until the password is generated -->
-                    <!-- space to output the password -->
+                        <form method='POST' action='index.php'>
+                            <!-- User input: how many terms to use -->
+                            <label for="numberofwords">Number of terms:</label>
+                            <input type="number" name="numberofwords" id="numberofwords" max="3" min="1">
+                            <p><i>Enter 1, 2, or 3; any more and the password becomes unwieldy.</i></p>
+                            <br>
+                            <!-- User input: add a symbol or number -->
+                            <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
+                            <input type="checkbox" name="addsymbol" value="addsymbol" id="addsymbol"><br>
+                            <label for="addnumber">Add a number? </label>&nbsp;&nbsp;
+                            <input type="checkbox" name="addnumber" value="addnumber" id="addnumber"><br><br>
+                            <input type="submit" value="Generate Password" class="btn btn-default">
+                        </form><br> 
+                    <p>Your password is...</p>
+                    <!-- Output: password -->
                     <p class="output"><?php echo join("",$password); ?><?php echo $passwordsymbol; ?><?php echo $passwordnumber; ?></p>
                 </div>
             </div>
-            <div class="col-md-8 about">
-            <p>XKCD is a web comic created by Randal Monroe in 2005.  He describes the comic as a "stick-figure strip featuring humour about technology, science, mathematics and relationship."</p>
-            <p>In August 2011, Monroe posted <a href="http://xkcd.com/936/" target="_blank">"Password Strength"</a>,  a proposal to create passwords that are easy for people to remember and hard for computers to guess, noticing the problem that increasingly computers are guessing the passwords that we tried SO hard to make complicated, and consequently forgot them due to their complexity. </p>
-                <p>Citing the example of a password like 'Tr0ub4dor&amp;3' (how is anyone supposed to remember that?', he proposed using four random common words -- e.g. correcthorsebatterystaple. </p>
+            <div class="col-md-8">
+                <p>XKCD is a web comic created by Randall Munroe in 2005.  He describes the comic as a "stick-figure strip featuring humour about technology, science, mathematics and relationship." </p>
+                <p>In August 2011, Munroe posted the comic, <a href="http://xkcd.com/936/" target="_blank">"Password Strength"</a>, about how in trying to create passwords that are difficult to hack, we end up creating easily-hacked passwords that are hard to remember. </p>
+                <p>Citing the example of a password like 'Tr0ub4dor&amp;3' (how is anyone supposed to remember that?), he proposed making passwords out of dictionary words -- e.g. <strong>correcthorsebatterystaple. </strong></p>
                 <hr class="divider">
                 <p>I made a password generator using Japanese sound-effect words, a.k.a. <i>onomatopoeia</i>. </p>
-                <p>For people familiar with Pokemon, you may recognize 'pikapika' as the sound Pikachu makes when he's energized; in fact, 'pikapika' means 'to glitter or sparkle' in Japanese. </p>
-                <p>How about 'dokidoki'? ... It's the sound of a heart beating. </p>
-                <p>I thought Japanese sound effect words would be fun to use in passwords, so here you are! Please feel free to give it a try. </p>
+                <p>You may recognize 'pikapika' as the sound Pikachu makes when he's energized. 'Pikapika' means 'to glitter or sparkle' in Japanese. </p>
+                <p>How about 'dokidoki'? It's the sound of a heart beating. </p>
+                <p>Use the form on the left to create your own password! </p>
             </div>
         </div>
         <div class="footer">
