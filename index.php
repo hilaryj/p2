@@ -32,8 +32,8 @@ ini_set('display_errors', 1);
                         <form method='POST' action='index.php'>
                             <!-- User input: how many terms to use -->
                             <label for="numberofwords">Number of terms:</label>
-                            <input type="number" name="numberofwords" id="numberofwords" max="3" min="1">
-                            <p><i>Enter 1, 2, or 3; any more and the password becomes unwieldy.</i></p>
+                            <input type="number" name="numberofwords" id="numberofwords" max="3" min="2">
+                            <p id="hint">Enter 2 or 3: 1 is too weak, and more than 3 creates an unwieldy password!</p>
                             <br>
                             <!-- User input: add a symbol or number -->
                             <label for="addsymbol">Add a symbol? </label>&nbsp;&nbsp;
