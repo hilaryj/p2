@@ -8,7 +8,7 @@ XKCD-style Password Generator using Japanese sound effect words.
 For CSCI E-15 Project 2.
 
 ## Demo
-TBA -- I will post a Jing screencast link on Saturday 10/4/2014
+<http://www.screencast.com/t/lXdseoyiA>
 
 ## Details for teaching team
 Fonts are from Google Fonts
